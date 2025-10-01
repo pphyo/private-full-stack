@@ -1,0 +1,180 @@
+{
+    "code-runner.executorMap": {
+        "python": "/bin/python3"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.autoSave": "onWindowChange",
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ],
+    "editor.formatOnSave": true,
+    "javascript.suggestionActions.enabled": false,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "explorer.confirmDelete": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "GitHub Dark",
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.codeActionsOnSave": { /// TSX auto format on save ESLint
+            "source.fixAll.eslint": "always"
+        }
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": { /// TSX auto format on save ESLint
+            "source.fixAll.eslint": "always"
+        }
+    },
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "workbench.tree.indent": 10,
+    "editor.inlineSuggest.enabled": false,
+    "background.enabled": true,
+    "background.fullscreen": {
+        "images": [
+            "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fd3407c5-25ad-4b8b-acba-533a753809d8/djai85b-0655be68-f6b0-4691-9ed9-94be6794115b.png/v1/fill/w_1194,h_669,q_70,strp/ocean_s_silent_howl_by_redfoxarts_djai85b-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvZmQzNDA3YzUtMjVhZC00YjhiLWFjYmEtNTMzYTc1MzgwOWQ4XC9kamFpODViLTA2NTViZTY4LWY2YjAtNDY5MS05ZWQ5LTk0YmU2Nzk0MTE1Yi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._KItn_4ajN2o0FZkTC7UIsiX3h_ihNXoF2pPNn7--tA"
+        ],
+        "opacity": 0.1,
+        "size": "cover",
+        "position": "center",
+        "interval": 0,
+        "random": false
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.accessibilitySupport": "on",
+    "liveshare.accessibility.soundsEnabled": false,
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.nextEditSuggestion": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "redhat.telemetry.enabled": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-http-request-post-response.instructions.md": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-http-request-pre-request.instructions.md": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-collections-post-response.instructions.md": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-collections-pre-request.instructions.md": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-folder-post-response.instructions.md": true,
+        "/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/postman-folder-pre-request.instructions.md": true
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "docker.extension.enableComposeLanguageServer": false
+}
