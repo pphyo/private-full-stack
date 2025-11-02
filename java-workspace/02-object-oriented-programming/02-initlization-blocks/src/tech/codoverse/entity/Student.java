@@ -16,10 +16,10 @@ public class Student {
     }
 
     public Student(String name) {
-        this();
         if (name.isBlank()) {
             throw new RuntimeException("Name cannot be empty!");
         }
+        this();
         System.out.println("1 arg constructor");
         this.name = name;
     }
