@@ -1,5 +1,6 @@
 package tech.codoverse;
 
+import tech.codoverse.pkg.ChildFromDiffPkg;
 import tech.codoverse.services.AppService;
 
 public class InheritanceApp {
@@ -11,11 +12,24 @@ public class InheritanceApp {
         var service = new AppService();
         service.greet("text");
         super();
-        System.out.println(hashCode());
+        IO.println(hashCode());
     }
 
     public static void main(String[] args) {
-        var app = new InheritanceApp("");
-        System.out.println(app);
+
+        // ChildInSamePkg samePkg = new ChildInSamePkg();
+        // samePkg.doWork();
+        // IO.println(samePkg.name);
+        // IO.println(samePkg.count);
+        // samePkg.countUp();
+
+        // IO.println();
+
+        ChildFromDiffPkg diffPkg = new ChildFromDiffPkg("");
+        diffPkg.doWork();
+        IO.println(diffPkg.name);
+        IO.println(ChildFromDiffPkg.count);
+        // ChildFromDiffPkg.countUp();
+
     }
 }
