@@ -1,0 +1,403 @@
+2
+4
+8
+16
+32
+64
+128
+256
+
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+-128 -127 -126 -125 ... 0 ... 127
+128  129  130
+
+// outside class
+
+package statement
+import statement
+comment => (3) single, multi, doc
+
+package and import statements are optional.
+if they are declared
+package statement must be the first line
+import statement are must be between package and class.
+
+// members inside class
+variable declaration // static for class, non-static for object
+method definition // static, non-static
+nested class // static, non-static
+block {} // static, non-static
+comment
+construtor
+
+class A {
+	Scanner sc = new Scanner(System.in); // variable declaration
+	void method() {} // method definition
+	A() {} // construtor
+	{} // instance block
+	static {} // static block
+	class InnerInstance {} // inner class
+	static class InnerStatic {} // nested class
+}
+
+Variables (aka) Noun
+=========
+field, state, property, parameter, arugument
+
+Methods (aka) Verb
+=======
+function, operation, action, behaviour, procedure
+
+I eat the apple;
+
+public class I {
+	// default (or) package private
+	Object food;
+	void eat() {
+		food = "Apple";
+		food = "Orange";
+	}
+}
+
+code ရေးမည့်ဖိုင်ကို source file လို့ခေါ်တယ်။
+java code တွေကို .java ဆိုတဲ့ file extension နဲ့ သိမ်းရတယ်။
+java ဖိုင် တခုမှာ class အများကြီး ရေးလို့ရ။
+public access ရှိတဲ့ class ကတော့ တခုပဲ ရေးလို့ရမယ်။
+အဲ့ဒီ public class က File name နဲ့ ထပ်တူညီရမယ်။
+
+module > package > class > var and method
+
+Data Type
+=========
+1. Primitive Data Type (အခြေခံအကျဆုံး built-in data type တွေဖြစ်တယ်။ ၎င်းတို့ကို သုံးပြီး complex data(object) တွေကို တည်ဆောက်ဖို့ သုံးတယ်။ number, char, bool)
+2. Reference Data Type (literal တွေကို တိုက်ရိုက် မထည့်ဘဲ object ရှိနေတဲ့ memory address ကို ညွှန်းထားတဲ့အတွက်)
+
+Primitive Data Type
+===================
+1. boolean (true or false)
+2. number type
+	Integer type
+		byte => 8 bit
+		short => 16 bit
+		int => 32 bit (default)
+		long => 64 bit
+	Float type
+		float => 32 bit
+		double => 64 bit (default)
+	Character
+		char => 16 bit
+
+Numeric promotion
+=================
+first make a decision of numeric type when defining a literal
+second what's the bigger numeric number of its type
+third should they promote of type when calculating with operator the number
+fourth calculate the result
+
+byte b = 20;
+
+number literal
+==============
+binary (prefix - 0b, 0B) 2 base
+octal (prefix - 0) 8 base
+decimal (no prefix) 10 base
+hexadecimal (prefix - 0x, 0X) 16 base
+
+character literal
+=================
+character literal ('a')
+unicode escapse ('\u1000')
+ASCII code point (33 - !)
+
+Variables
+=========
+declaration
+-----------
+dataType variableName [= value];
+
+တန်ဖိုးတွေ သိမ်းထားလို့ရတယ်။
+တန်ဖိုးအသစ် ပြောင်းချင်ရင် ပြောင်းလို့ရတယ်။
+variable ထဲမှာရှိတဲ့ တန်ဖိုးကိုသုံးချင်ရင် ၎င်းနာမည်နှင့် ပြန်အသုံးပြုလို့ရတယ်။
+
+1. static variable (belongs to class)
+2. non-static variable (belongs to object)
+3. method level variable
+	method parameter
+	method scope local variable
+
+class level variable တွေက class ရဲ့ မည်သည့်နေရာက မဆို လှမ်း access လုပ်လို့ရ
+initialization မထည့်ခဲ့ဘူးဆိုလျှင်တောင် compiler က default initialization ကို ထည့်ပေးတယ်
+class level variable တွေကို initialize လုပ်လိုလျှင် declare လုပ်သည့် line မှာ initialize လုပ်ပေးရပါမယ်။ နောက်မှ initialize လုပ်မည်ဆိုလျှင် method ထဲမှာပဲ လုပ်ခွင့်ရှိသည်။ class အထဲမှာ လုပ်ခွင့် မရှိပါ။
+method level variable(local variable) တွေကတော့ method အတွင်းမှာ စ declare လုပ်တဲ့ line ကနေစပြီီး method ဆုံးတဲ့အထိ access လုပ်လို့ရတယ်။
+local variable တွေကို default initialization မထည့်ပေးပါဘူး
+
+boolean => false
+byte => 0
+short => 0
+int => 0
+long => 0L
+float => 0.0f
+double => 0.0d
+char => '\u0000'
+String and other objects => null
+
+Identifier
+==========
+- package, class (concrete class, abstract class, interface, record, enum, annotaion), variable, method
+- must begin with letter, currency symbols, _ .
+- can include numbers but not start with them
+- A single underscore (_) is not allowed as an identifier. (Preview feature for unnamed variable)
+- You cannot use the same name as a Java reserved word.
+
+Naming Convention
+=================
+PascalCase
+==========
+my age becomes MyAge
+main view controller becomes MainViewController
+default user parameters becomes DefaultUserParameters
+
+camelCase
+=========
+my variable becomes myVariable
+can eat becomes canEat
+can declare becomes canDeclare
+
+Snake case
+==========
+my case becomes my_case or MY_CASE
+array list becomes array_list or ARRAY_LIST
+
+package
+=======
+Lowercase continuous words
+
+class (concrete class, abstract class, interface, record, enum, annotaion)
+=======
+PascalCase
+
+class MainViewController {}
+
+variable
+========
+camelCase (N)
+
+var dayOfWeek = 25;
+
+method
+======
+camelCase (V)
+
+void openNetworkConnection() {}
+
+constant
+========
+THIS_IS_MY_CONSTANT
+
+type parameter
+==============
+Single word uppercase letter (<K>, <T>, <V>, <E>) see later in Generic
+
+final var
+=========
+it's a constant variable.
+must be manually initialized both in class level and method level variables.
+cannot be reassigned
+
+Methods
+=======
+Methods must be defined only in class level.
+
+mandatory in menthod's structure
+================================
+[access modifier] [non access modifer] returnTypes methodName([parameter list]) [throws Exception1, Exception2, ...] {}
+
+parts in [] are optional.
+returnTypes, methodName, () and {} are mandatory.
+returnTypes are void, dataType
+
+parameter and argument
+======================
+variables used when defining methods called parameters.
+void add(int a, int b) { // a and b are paramters
+	// some code
+}
+variables used when invoking methods called arguments.
+int x = 10;
+int y = 20;
+add(x, y); // x and y are arguments
+
+10 * 20
+10 + 20
+10 - 20
+10 / 20
+10 % 20
+
+10 and 20 are operands.
+*, +, -, /, % are operators.
+
+6 / 3 - 3 * 2 + 4 % 2
+2 - 3 * 2 + 4 % 2
+2 - 6 + 4 % 2
+2 - 6 + 0
+-4 + 0
+
+operator precedence
+===================
+++, --
+*, /, %
++, -
+
+Logical operators
+=================
+& => Bitwise AND
+| => Bitwise Inclusive OR
+^ => Bitwise Exclusive OR
+&& => Logical AND (Conditional AND)
+|| => Logical OR (Conditional OR)
+
+Join two or more boolean expressions and decide the result.
+
+AND (&, &&)
+===========
+If all the boolean expressions are true, that the result is true.
+One of the boolean expressions is flase, that the result is false.
+
+T && T = T
+T && F = F
+F && T = F
+F && F = F
+
+OR (|, ||)
+==========
+If all the boolean expressions are false, that the result is false.
+One of the boolean expressions is true, that the result is true.
+
+T || T = T
+T || F = T
+F || T = T
+F || F = F
+
+XOR (^)
+=======
+If all the boolean expressions are the same, that the result is false.
+If one the boolean expressions is different from others, that the result is true.
+
+T ^ T = F
+F ^ F = F
+T ^ F = T
+F ^ T = T
+
+example program => number swaping, unique element in array
+
+Control Statement
+=================
+
+if => check condition exact value or range value(0-9)
+switch => check exact value
+
+Array []
+=====
+store multiple values
+array define its length
+array length must be fixed that cannot be add or remove
+
+multi di
+========
+[3][4]
+
+0 => [0, 1, 2, 3]
+1 => 0, 1, 2, 3
+2 => 0, 1, 2, 3
+
+[3][2]
+
+0 => 0, 1
+1 => 0, 1
+2 => 0, 1
+
+CRUD = Create, Read(Retrieve), Update, Delete
+
+OOP
+===
+If want to call members in class, the syntax is [owner].[class]
+Two types of owner => class and object
+All static members belong to class so we call ClassName.[staticMember]
+All non-static(instance) members belogn to object so we create object from its class first and then we call object.[instanceMember]
+
+Class
+=====
+can access static members
+
+Object
+======
+can access not only instance members but also static members
+
+from static to static => ok
+from static to instance => not ok (ok for object reference)
+from instance to instance => ok
+from instance to static => ok (If static members are accessed by object reference, so this is not the right way. It should be accessed by Class)
+
+Encapsulation
+=============
+must be encapsule fields
+If need, you can encapsule method
+always need encapsulation, if no need, you can be release the field
+
+Access Modifier
+===============
+private => only within a same class (the most narrowing)
+default (Package private)  => only within a same package
+protected => In a same package, it can be access. Outside package, it must be inherited for access
+
+Inheritance
+===========
+Called is a relationship.
+All the members allow from parent inherit to child.
+All the members mean static and non-static variables, methods including constructor.
+One class can inherit to only one class. Mean that a child class can have only one parent class.
+But A parent class can have multiple child classes.
+
+Method overriding
+Type casting
+Polymorphism
+
+Method overriding rules
+=======================
+method name နှင့် parameter list ထပ်တူညီရမယ်။
+access modifier က မိဘထဲမှာရှိတာနဲ့ တူရင်တူ မတူရင် ပိုကျယ်တဲ့ access ဖြစ်ရမယ်။
+parent's void => child's void
+parent's prmitive type => child must be the same return type
+parent return other object => မိဘထဲရှိ return type နှင့် တူရင်တူ မတူလျှင် ပိုသေးသော return type ဖြစ်ရမယ်။
+
+not overriding rules
+====================
+final method => inherit but cannot override
+private method => neither inherit nor can override
+static method => inherit but cannot override
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
