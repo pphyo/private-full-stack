@@ -1,4 +1,4 @@
-package tech.codoverse.framework;
+package tech.codoverse.core;
 
 public abstract class AbstractFeature {
 

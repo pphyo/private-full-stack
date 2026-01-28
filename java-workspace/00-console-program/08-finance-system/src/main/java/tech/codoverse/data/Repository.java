@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 import tech.codoverse.model.entities.BaseEntity;
 
@@ -29,5 +30,9 @@ public class Repository<T extends BaseEntity> {
 
     public Optional<T> findById(String id) {
         return database.stream().filter(i -> i.getId().equals(id)).findFirst();
+    }
+
+    public Stream<T> stream() {
+        return database.stream();
     }
 }

@@ -3,19 +3,13 @@ package tech.codoverse.model.entities;
 public class Category extends BaseEntity {
 
     private String name;
-    private TransactionType type;
 
-    public Category(String name, TransactionType type) {
+    public Category(String name) {
         this.name = name;
-        this.type = type;
     }
 
     public String getName() {
         return name;
-    }
-
-    public TransactionType getType() {
-        return type;
     }
 
 }
