@@ -9,10 +9,50 @@ import java.sql.SQLException;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class ExceptionsApp {
+public class ExceptionsApp implements AutoCloseable {
 
 	void main() {
-		runForFinally();
+		run();
+	}
+
+	void run() {
+		try {
+			String name = IO.readln("Enter team name: ");
+			if (name.isBlank()) {
+				var cause = new IllegalArgumentException("Name is empty or null.");
+				throw new TeamValidationException("Name cannot be empty!", cause);
+			}
+
+			int foundedYear = Integer.parseInt(IO.readln("Enter year founded: "));
+			if (foundedYear <= 0) {
+				throw new TeamValidationException("Founded year must greater than zero.");
+			}
+
+			String league = IO.readln("Enter league: ");
+			if (league.isBlank()) {
+				throw new TeamValidationException("League cannot be empty!");
+			}
+
+			var team = new Team(1, name, foundedYear, league);
+			IO.println(team);
+		} catch (TeamValidationException e) {
+			IO.println(e.getMessage());
+		} catch (NumberFormatException e) {
+			IO.println(e.getMessage());
+		}
+	}
+
+	@SuppressWarnings("unused")
+	void runForSuppressed() {
+		try (var app = new ExceptionsApp()) {
+			throw new RuntimeException("blizzard");
+		} catch (Exception e) {
+			IO.println(e.getMessage() + " " + e.getSuppressed().length);
+		}
+	}
+
+	public void close() {
+		throw new RuntimeException("flurry");
 	}
 
 	void runForAutomaticallyManageResource() {

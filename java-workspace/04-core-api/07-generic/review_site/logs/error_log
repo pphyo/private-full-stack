@@ -1,0 +1,5 @@
+[2025-12-29T02:37:54.794+08:00] [ShutdownCallback] INFO  com.google.gerrit.pgm.Daemon : caught shutdown, cleaning up
+[2025-12-29T02:37:54.910+08:00] [ShutdownCallback] INFO  org.eclipse.jetty.server.AbstractConnector : Stopped ServerConnector@423ddfe1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[2025-12-29T02:37:54.911+08:00] [ShutdownCallback] INFO  org.eclipse.jetty.server.session : node0 Stopped scavenging
+[2025-12-29T02:37:54.931+08:00] [ShutdownCallback] INFO  org.eclipse.jetty.server.handler.ContextHandler : Stopped o.e.j.s.ServletContextHandler@59c9e3b9{/,null,STOPPED}
+[2025-12-29T02:37:54.991+08:00] [ShutdownCallback] INFO  com.google.gerrit.sshd.SshDaemon : Stopped Gerrit SSHD
