@@ -1,9 +1,15 @@
 package tech.codoverse;
 
+import java.math.BigDecimal;
+
 import tech.codoverse.core.AbstractFeature;
 import tech.codoverse.core.AccountFeature;
 import tech.codoverse.core.CategoryFeature;
 import tech.codoverse.core.DataContext;
+import tech.codoverse.core.ExpenseFeature;
+import tech.codoverse.core.IncomeFeature;
+import tech.codoverse.core.ReportFeature;
+import tech.codoverse.core.TransferFeature;
 import tech.codoverse.data.Repository;
 import tech.codoverse.model.entities.Account;
 import tech.codoverse.model.entities.Budget;
@@ -22,17 +28,25 @@ public class ConsoleFinanceApp {
 
         var accountFeat = new AccountFeature(context);
         var categoryFeat = new CategoryFeature(context);
+        var incomeFeat = new IncomeFeature(context);
+        var expenseFeat = new ExpenseFeature(context);
+        var transferFeat = new TransferFeature(context);
+        var reportFeat = new ReportFeature(context);
 
         var features = new AbstractFeature[] {
                 accountFeat,
-                categoryFeat
+                categoryFeat,
+                incomeFeat,
+                expenseFeat,
+                transferFeat,
+                reportFeat
         };
 
         launch(context, features);
     }
 
     private void launch(DataContext context, AbstractFeature[] features) {
-        init(context.categoryRepo());
+        init(context);
 
         IO.println("=== SMART FINANCE MANAGER");
         boolean running = true;
@@ -64,12 +78,15 @@ public class ConsoleFinanceApp {
         }
     }
 
-    private void init(Repository<Category> categoryRepo) {
-        categoryRepo.save(new Category("Bills"));
-        categoryRepo.save(new Category("Car"));
-        categoryRepo.save(new Category("Health"));
-        categoryRepo.save(new Category("Clothing"));
-        categoryRepo.save(new Category("Education"));
+    private void init(DataContext context) {
+        context.accountRepo().save(new Account("Cash", new BigDecimal(100000)));
+        context.accountRepo().save(new Account("KPay", new BigDecimal(100000)));
+
+        context.categoryRepo().save(new Category("Bills"));
+        context.categoryRepo().save(new Category("Car"));
+        context.categoryRepo().save(new Category("Health"));
+        context.categoryRepo().save(new Category("Clothing"));
+        context.categoryRepo().save(new Category("Education"));
     }
 
 }

@@ -10,6 +10,7 @@ public class CategoryFeature extends AbstractFeature {
 
     @Override
     public void doBusiness() {
+        IO.println();
         IO.println(">> Category Management");
         IO.println("1. List Categories");
         IO.println("2. Add New Category");

@@ -12,6 +12,7 @@ public class AccountFeature extends AbstractFeature {
 
     @Override
     public void doBusiness() {
+        IO.println();
         IO.println(">> Account Magagement");
         IO.println("1. List All Accounts");
         IO.println("2. Create New Account");
